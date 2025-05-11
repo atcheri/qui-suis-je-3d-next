@@ -6,7 +6,7 @@ import Image from "next/image";
 const LogoIcon: FC<{ companyLogo: CompanyLogo }> = ({ companyLogo }) => {
   return (
     <div className="flex-center marquee-item flex-none">
-      <Image src={companyLogo.imagePath} alt={companyLogo.alt} />
+      <Image src={companyLogo.imagePath} alt={companyLogo.alt} width={500} height={500} />
     </div>
   );
 };

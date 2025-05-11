@@ -26,7 +26,7 @@ const Button: FC<ButtonProps & HTMLAttributes<HTMLButtonElement>> = ({ text, cla
         <div className="bg-circle" />
         <p className="text">{text}</p>
         <div className="arrow-wrapper">
-          <Image src="/images/arrow-down.svg" alt="arrow" />
+          <Image src="/images/arrow-down.svg" alt="arrow" width={500} height={500} />
         </div>
       </div>
     </a>

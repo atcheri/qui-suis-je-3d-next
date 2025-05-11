@@ -2,11 +2,17 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import dynamic from "next/dynamic";
 
 import { techStackIcons } from "./constants";
-import TechIconCard from "./TechIconCard";
 import AnchoredHeader from "@/app/components/AnchorHeader";
 import { SECTION } from "@/app/components/constants";
+
+// Dynamically import the TechIconCard to ensure it only runs client-side
+const TechIconCard = dynamic(() => import("./TechIconCard"), {
+  ssr: false,
+  loading: () => <div className="w-full h-40 bg-gray-100 animate-pulse rounded-md"></div>
+});
 
 const TeckStack = () => {
   useGSAP(() => {

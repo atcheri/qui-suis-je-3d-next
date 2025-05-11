@@ -25,7 +25,7 @@ const Hero: FC = () => {
   return (
     <section id="hero">
       <div className="absolute top-0 left-0 z-10">
-        <Image src="/images/bg.png" alt="hero-background" />
+        <Image src="/images/bg.png" alt="hero-background" width={500} height={500} />
       </div>
 
       <div className="hero-layout">
@@ -43,6 +43,8 @@ const Hero: FC = () => {
                             src={word.imgPath}
                             alt="person"
                             className="bg-white-50 size-7 rounded-full p-1 md:size-10 md:p-2 xl:size-12"
+                            width={500}
+                            height={500}
                           />
                           <span>{word.text}</span>
                         </span>
