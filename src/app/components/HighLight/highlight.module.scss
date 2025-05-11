@@ -1,0 +1,39 @@
+.highlightContainer {
+  display: inline-block;
+  position: relative;
+
+  .highlight {
+    position: relative;
+  }
+
+  &:before {
+    content: ' ';
+    display: block;
+    height: 90%;
+    width: 100%;
+    margin-left: -3px;
+    margin-right: -3px;
+    position: absolute;
+    background: #a5b4fc;
+    transform: rotate(2deg);
+    top: -1px;
+    left: -1px;
+    border-radius: 20% 25% 20% 24%;
+    padding: 10px 3px 3px 10px;
+  }
+}
+
+.stabylo {
+  position: relative;
+  &:before {
+    content: '';
+    background-color: #a5b4fc;
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 60%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
+}

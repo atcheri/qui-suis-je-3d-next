@@ -1,0 +1,21 @@
+{
+  "name": "Qui-suis je? Atch",
+  "short_name": "Ze site",
+  "desciption": "Non, ce n'est pas un site de rencontre.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#362F78",
+  "theme_color": "#362F78",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
