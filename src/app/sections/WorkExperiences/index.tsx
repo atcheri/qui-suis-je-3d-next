@@ -83,7 +83,7 @@ const WorkExperience = () => {
                     </div>
                     <div className="expText relative z-20 flex gap-5 md:gap-10 xl:gap-20">
                       <div className="timeline-logo">
-                        <Image src={exp.logoPath || ""} alt="logo" width={500} height={500} />
+                        <Image src={exp.logoPath || "/images/bg.png"} alt="logo" width={500} height={500} />
                       </div>
                       <div>
                         <h1 className="text-3xl font-semibold">{exp.title}</h1>
