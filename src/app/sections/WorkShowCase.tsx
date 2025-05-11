@@ -67,7 +67,13 @@ const WorkShowCase = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={sdkRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
-                <Image src="/images/affinidi-vault-profile-create.gif" alt="Affinidi Vault" width={500} height={500} />
+                <Image
+                  src="/images/affinidi-vault-profile-create.gif"
+                  alt="Affinidi Vault"
+                  width={500}
+                  height={500}
+                  unoptimized
+                />
               </div>
               <h2>
                 Vault enables discovering, collecting, storing, sharing, and monetising data in a fragmented world
