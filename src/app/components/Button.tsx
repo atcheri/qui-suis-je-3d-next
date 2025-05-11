@@ -1,14 +1,11 @@
+import Image from "next/image";
 import type { FC, HTMLAttributes } from "react";
 
 type ButtonProps = {
   text: string;
   id: string;
 };
-const Button: FC<ButtonProps & HTMLAttributes<HTMLButtonElement>> = ({
-  text,
-  className,
-  id,
-}) => {
+const Button: FC<ButtonProps & HTMLAttributes<HTMLButtonElement>> = ({ text, className, id }) => {
   return (
     <a
       onClick={(e) => {
@@ -18,8 +15,7 @@ const Button: FC<ButtonProps & HTMLAttributes<HTMLButtonElement>> = ({
         if (target && id) {
           const offset = window.innerHeight * 0.15;
 
-          const top =
-            target.getBoundingClientRect().top + window.pageYOffset - offset;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
 
           window.scrollTo({ top, behavior: "smooth" });
         }
@@ -30,7 +26,7 @@ const Button: FC<ButtonProps & HTMLAttributes<HTMLButtonElement>> = ({
         <div className="bg-circle" />
         <p className="text">{text}</p>
         <div className="arrow-wrapper">
-          <img src="/images/arrow-down.svg" alt="arrow" />
+          <Image src="/images/arrow-down.svg" alt="arrow" />
         </div>
       </div>
     </a>

@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import AnchoredHeader from "../components/AnchorHeader";
 import { SECTION } from "../components/constants";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,7 +54,7 @@ const WorkShowCase = () => {
         <div className="showcaselayout mt-8">
           <div ref={devExRef} className="first-project-wrapper">
             <div className="image-wrapper">
-              <img src="/images/affinidi-devex-portal.png" alt="Dev-Ex portal" />
+              <Image src="/images/affinidi-devex-portal.png" alt="Dev-Ex portal" />
             </div>
             <div className="text-content">
               <h2>An interactive interface enabling developers integrate Affinidi Login into their application.</h2>
@@ -66,7 +67,7 @@ const WorkShowCase = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={sdkRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
-                <img src="/images/affinidi-vault-profile-create.gif" alt="Affinidi Vault" />
+                <Image src="/images/affinidi-vault-profile-create.gif" alt="Affinidi Vault" />
               </div>
               <h2>
                 Vault enables discovering, collecting, storing, sharing, and monetising data in a fragmented world
@@ -74,7 +75,7 @@ const WorkShowCase = () => {
             </div>
             <div className="project" ref={cliRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/affinidi-cli.png" alt="Affinidi CLI" className="rounded-4xl" />
+                <Image src="/images/affinidi-cli.png" alt="Affinidi CLI" className="rounded-4xl" />
               </div>
               <h2>CLI to easily manage projects and integrate with Affinidi services using the command line</h2>
             </div>

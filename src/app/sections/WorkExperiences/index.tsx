@@ -8,6 +8,8 @@ import { workExperiences } from "./constants";
 import AnchoredHeader from "@/app/components/AnchorHeader";
 import { SECTION } from "@/app/components/constants";
 import GlowCard from "@/app/components/GlowCard";
+import Link from "next/link";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,16 +83,18 @@ const WorkExperience = () => {
                     </div>
                     <div className="expText relative z-20 flex gap-5 md:gap-10 xl:gap-20">
                       <div className="timeline-logo">
-                        <img src={exp.logoPath} alt="logo" />
+                        <Image src={exp.logoPath || ""} alt="logo" />
                       </div>
                       <div>
                         <h1 className="text-3xl font-semibold">{exp.title}</h1>
                         <h2>
                           {exp.place}, {exp.location}
                         </h2>
-                        <a href={exp.url} target="_blank" className="italic">
-                          {exp.url}
-                        </a>
+                        {exp.url && (
+                          <Link href={exp.url} target="_blank" className="italic">
+                            {exp.url}
+                          </Link>
+                        )}
                         <p className="text-white-50 my-5">🗓️&nbsp;{exp.period.year}</p>
                         <p className="text-[#839CB5] italic">Responsibilities</p>
                         <ul className="text-white-50 ms-5 mt-5 flex list-disc flex-col gap-5">

@@ -4,6 +4,7 @@ import { type ComponentType, type FC, useState } from "react";
 
 import { GolangIcon, NodeJSIcon, SolidityIcon, TypescriptReactIcon } from "../../../components/icons";
 import { IconProps } from "@/app/components/icons/types";
+import Image from "next/image";
 
 type Snippet = {
   lang: string;
@@ -54,7 +55,7 @@ const CodeSnippets: FC = () => {
           </li>
         ))}
       </ul>
-      <img src={activeSnippet.imgPath} width={780} height={72} alt={`${activeSnippet.lang} code snippet`} />
+      <Image src={activeSnippet.imgPath} width={780} height={72} alt={`${activeSnippet.lang} code snippet`} />
     </div>
   );
 };

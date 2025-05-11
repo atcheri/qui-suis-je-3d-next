@@ -8,6 +8,8 @@ import { Fade } from "react-awesome-reveal";
 import CodeSnippets from "./CodeSnippets";
 import { RESUME_URL, words } from "./constants";
 import Button from "@/app/components/Button";
+import Link from "next/link";
+import Image from "next/image";
 
 const delayUnit = 500;
 
@@ -23,7 +25,7 @@ const Hero: FC = () => {
   return (
     <section id="hero">
       <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="hero-background" />
+        <Image src="/images/bg.png" alt="hero-background" />
       </div>
 
       <div className="hero-layout">
@@ -37,7 +39,7 @@ const Hero: FC = () => {
                     <span className="wrapper">
                       {words.map((word, index) => (
                         <span key={index} className="flex items-center gap-1 pb-2 md:gap-3">
-                          <img
+                          <Image
                             src={word.imgPath}
                             alt="person"
                             className="bg-white-50 size-7 rounded-full p-1 md:size-10 md:p-2 xl:size-12"
@@ -53,11 +55,11 @@ const Hero: FC = () => {
               </div>
 
               <p className="text-white-50 relative z-10 md:text-xl">
-                Hi, I'm Atsuhiro. <br />
+                Hi, I&apos;m Atsuhiro. <br />
                 You can find my{" "}
-                <a href={RESUME_URL} className="font-bold underline" target="_blank">
+                <Link href={RESUME_URL} className="font-bold underline" target="_blank">
                   Resume here
-                </a>
+                </Link>
                 , or
               </p>
               <Button text="Discover my work" className="h-12 w-60 md:h-16 md:w-80" id="work" />

@@ -10,6 +10,7 @@ import { testimonials, type Testimonial } from "./constants";
 import AnchoredHeader from "@/app/components/AnchorHeader";
 import GlowCard from "@/app/components/GlowCard";
 import useShowMore from "@/app/hooks/useShowMore";
+import Link from "next/link";
 
 const quoteClass = "rotate-12 h-8 w-8 opacity-20 dark:opacity-30 dark:fill-white";
 
@@ -51,14 +52,14 @@ const Testimonials = () => {
                   <h3 className="title-font font-rochester text-xl font-medium tracking-wider italic">{name}</h3>
                   <p className="flex gap-2">
                     {linkedin && (
-                      <a href={linkedin} target="_blank">
+                      <Link href={linkedin} target="_blank">
                         <CiLinkedin className="h-6 w-6 text-blue-500" />
-                      </a>
+                      </Link>
                     )}
                     {github && (
-                      <a href={github} target="_blank">
+                      <Link href={github} target="_blank">
                         <FaGithub className="h-5 w-5" />
-                      </a>
+                      </Link>
                     )}
                     <span className="text-slate-500 dark:text-slate-300">{role}</span>
                   </p>

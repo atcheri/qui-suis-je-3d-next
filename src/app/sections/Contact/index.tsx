@@ -6,6 +6,7 @@ import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import ContactExperience from "./ContactExperience";
 import AnchoredHeader from "@/app/components/AnchorHeader";
 import { SECTION } from "@/app/components/constants";
+import Image from "next/image";
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -99,7 +100,7 @@ const Contact = () => {
                     <div className="bg-circle" />
                     <p className="text">{loading ? "Sending..." : "Send Message"}</p>
                     <div className="arrow-wrapper">
-                      <img src="/images/arrow-down.svg" alt="arrow" />
+                      <Image src="/images/arrow-down.svg" alt="arrow" />
                     </div>
                   </div>
                 </button>

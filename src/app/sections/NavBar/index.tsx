@@ -4,6 +4,7 @@ import { useState, useEffect, type FC } from "react";
 
 import { navLinks } from "./constants";
 import Logo from "@/app/components/Logo";
+import Link from "next/link";
 
 const NavBar: FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,20 +28,20 @@ const NavBar: FC = () => {
           <ul>
             {navLinks.map(({ link, name }) => (
               <li key={name} className="group">
-                <a href={link}>
+                <Link href={link}>
                   <span>{name}</span>
                   <span className="underline" />
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
 
-        <a href="#contact" className="contact-btn group">
+        <Link href="#contact" className="contact-btn group">
           <div className="inner">
             <span>Contact me</span>
           </div>
-        </a>
+        </Link>
       </div>
     </header>
   );
