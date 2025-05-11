@@ -17,6 +17,7 @@ const commonDescription = "Non, ce n'est pas un site de rencontre.";
 const commonImage = "/qui-suis-je-hero.png";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://atsuhiro.site"),
   title: commonTitle,
   description: commonDescription,
   manifest: "/manifest.json",
