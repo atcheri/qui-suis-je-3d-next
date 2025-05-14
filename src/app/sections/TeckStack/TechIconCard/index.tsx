@@ -11,13 +11,13 @@ type TechIconCardProps = {
 };
 
 // This component handles the 3D model loading and rendering
-const Model: FC<{ modelPath: string; scale: number; rotation: [number, number, number] }> = ({ 
-  modelPath, 
-  scale, 
-  rotation 
+const Model: FC<{ modelPath: string; scale: number; rotation: [number, number, number] }> = ({
+  modelPath,
+  scale,
+  rotation,
 }) => {
   const scene = useGLTF(modelPath);
-  
+
   return (
     <Float speed={5.5} rotationIntensity={0.5} floatIntensity={0.9}>
       <group scale={scale} rotation={rotation}>
@@ -38,26 +38,15 @@ const ModelLoading = () => {
 };
 
 const TechIconCard: FC<TechIconCardProps> = ({ model }) => {
-  // Track client-side rendering
   const [isMounted, setIsMounted] = useState(false);
 
-  // Only run on client
   useEffect(() => {
-    setIsMounted(true);
-    
-    // Preload the model
     useGLTF.preload(model.modelPath);
-    
-    return () => {
-      // Cleanup if needed
-    };
+    setIsMounted(true);
   }, [model.modelPath]);
 
-  // Show nothing during SSR
   if (!isMounted) {
-    return (
-      <div className="w-full h-40 bg-gray-100 animate-pulse rounded-md"></div>
-    );
+    return <div className="h-40 w-full animate-pulse rounded-md bg-gray-100"></div>;
   }
 
   return (
@@ -68,11 +57,7 @@ const TechIconCard: FC<TechIconCardProps> = ({ model }) => {
       <Environment preset="city" />
 
       <Suspense fallback={<ModelLoading />}>
-        <Model 
-          modelPath={model.modelPath} 
-          scale={model.scale} 
-          rotation={model.rotation} 
-        />
+        <Model modelPath={model.modelPath} scale={model.scale} rotation={model.rotation} />
       </Suspense>
 
       <OrbitControls enableZoom={false} />

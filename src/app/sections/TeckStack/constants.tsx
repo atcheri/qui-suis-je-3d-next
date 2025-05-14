@@ -19,6 +19,18 @@ export const techStackIcons: TechStackIcon[] = [
     rotation: [0, 0, 0],
   },
   {
+    name: "Building apps on Solana",
+    modelPath: "/models/solana-3d-model.glb",
+    scale: 0.5,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Smart contracts in Solidity",
+    modelPath: "/models/solidity-3d-model.glb",
+    scale: 3,
+    rotation: [0, 0, 0],
+  },
+  {
     name: "Collaborative Development",
     modelPath: "/models/git.glb",
     scale: 4,
@@ -35,11 +47,5 @@ export const techStackIcons: TechStackIcon[] = [
     modelPath: "/models/node-transformed.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
-  },
-  {
-    name: "Writing smartcontracts in Solidity",
-    modelPath: "/models/solidity-3d-model.glb",
-    scale: 3,
-    rotation: [0, 0, 0],
   },
 ];
